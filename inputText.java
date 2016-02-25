@@ -7,7 +7,7 @@ public class inputText {
 
         String osname = System.getProperty("os.name", "").toLowerCase();
         if (osname.startsWith("windows")) {
-            String text = "Hello world Windows OS";
+            String text = "Windows OS";
             try {
                 File file = new File("C:/example.txt");
                 BufferedWriter output = new BufferedWriter(new FileWriter(file));
@@ -18,7 +18,7 @@ public class inputText {
                 e.printStackTrace();
             }
         } else if (osname.startsWith("linux")) {
-            String text = "Hello world Linux OS";
+            String text = "Linux OS";
             try {
                 File file = new File("/root/Desktop/example.txt");
                 BufferedWriter output = new BufferedWriter(new FileWriter(file));
@@ -29,7 +29,7 @@ public class inputText {
                 e.printStackTrace();
             }
         } else {
-            System.out.println("Sorry, your operating system is different");
+            System.out.println("Unknown OS.");
         }
     }
 }
